@@ -2,7 +2,7 @@
 # See file COPYRIGHT for more information.
 #
 # Adjust these two lines for your ANSI C compiler
-CC=gcc -ansi -pedantic
+CC=gcc -ansi
 CFLAGS=
 # If you have Icon, you should use the Icon versions of the noweb pipeline.
 # Set LIBSRC=icon
@@ -48,7 +48,7 @@ all:
 FAQ: FAQ.html
 	sleep 1; html2ascii FAQ.html > FAQ
 
-FAQ.html: $(HOME)/www/noweb/FAQ.html
+FAQ.html:
 	rm -f FAQ.html
 	/bin/cp $(HOME)/www/noweb/FAQ.html FAQ.html
 	chmod -w FAQ.html
